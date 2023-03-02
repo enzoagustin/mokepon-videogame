@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Mokepon Game</title>
+    <link rel="stylesheet" href="./styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <section id="petSelection">
+      <h1 class="title">Mokepon</h1>
+      <h2 class="subtitle">Select your pet</h2>
+
+      <div id='cardsContainer' class="cards"></div>
+
+      <button id="petSelectionButton">Select</button>
+    </section>
+
+    <section id="mapView">
+      <h2 class="subtitle">Move around with your pet</h2>
+
+      <canvas id="map"></canvas>
+
+      <button onmouseup="stopMovement()" onmousedown="moveOnTouch('UP')">UP</button>
+      <div>
+        <button onmouseup="stopMovement()" onmousedown="moveOnTouch('LEFT')">LEFT</button>
+        <button onmouseup="stopMovement()" onmousedown="moveOnTouch('DOWN')">DOWN</button>
+        <button onmouseup="stopMovement()" onmousedown="moveOnTouch('RIGHT')">RIGHT</button>
+      </div>
+    </section>
+
+    <section id="attacksSelection">
+      <h1 class="title">Mokepon</h1>
+      <h2 class="subtitle">Select your attacks</h2>
+
+      <div id='attacksContainer' class="attacks-cards"></div>
+
+      <div id="messages">
+        <p id="result">Good Luck!</p>
+
+        <section id="reset">
+          <button id="resetButton">Reset</button>
+        </section>
+      </div>
+
+      <section class="attacks">
+        <div class="player-attacks">
+          <p id="playerLives">0</p>
+          <p id="playerPet"></p>
+          <div id="playerAttacks"></div>
+        </div>
+        <div class="enemy-attacks">
+          <p id="enemyLives">0</p>
+          <p id="enemyPet"></p>
+          <div id="enemyAttacks"></div>
+        </div>
+      </section>
+    </section>
+
+    <script src="./scripts/mokepon.js"></script>
+  </body>
+</html>

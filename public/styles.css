@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #041562;
+}
+
+#petSelection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  color: white;
+  font-size: 32px;
+  font-family: 'Fredoka One', cursive;
+}
+
+.subtitle {
+  color: white;
+  font-size: 20px;
+}
+
+.cards, .attacks-cards {
+  display: flex;
+  gap: 10px;
+}
+
+.mokepon-card {
+  width: 180px;
+  height: 100px;
+  background: #11468F;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.mokepon-card img {
+  width: 80px;
+}
+
+#petSelectionButton {
+  width: 180px;
+  height: 40px;
+  border-radius: 20px;
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 30px;
+}
+
+input {
+  display: none;
+}
+
+input:checked + label {
+  background-color: #5D8BF4;
+}
+
+#attacksSelection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.attack-button {
+  background-color: #11468F;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  border-color: transparent;
+  width: 80px;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+#messages {
+  width: 280px;
+  background: #EEEEEE;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#resetButton {
+  border: none;
+  color: #11468F;
+  font-family: 'Poppins', sans-serif;
+}
+
+.attacks {
+  display: grid;
+  grid-template-columns: 100px 100px;
+  color: white;
+}
+
+#playerLives, #enemyLives {
+  font-size: 32px;
+  margin-bottom: 0;
+}
+
+.player-attacks, .enemy-attacks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#mapView {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#mapView button {
+  width: 80px;
+  height: 40px;
+  border-radius: 20px;
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  margin: 10px 0;
+}
+
+@media (max-width: 560px) {
+  .cards, .attacks-cards {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 300px) {
+  #mapView div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
