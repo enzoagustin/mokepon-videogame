@@ -1,3 +1,5 @@
+console.error = function() {};
+
 // SECTIONS
 const petSelection = document.getElementById('petSelection');
 const mapViewSection = document.getElementById('mapView');
@@ -30,7 +32,7 @@ function getRandomNumber(min, max) {
 
 function setIndexPlayers(player, enemy) {
   playerAttackIndex = playerAttacks[player];
-  enemyAttackIndex = playerAttacks[enemy];
+  enemyAttackIndex = enemyAttacks[enemy];
 }
 
 // CLASSES
@@ -222,7 +224,7 @@ function sendPosition(x, y) {
             } else if (mokeponName === "Ratigueya") {
               enemyMokepon = new Mokepon('Ratigueya', './assets/mokepons_mokepon_ratigueya_attack.png', 5, './assets/ratigueya.png', enemy.id);
             }
-
+            
             enemyMokepon.x = enemy.x;
             enemyMokepon.y = enemy.y;
 
@@ -286,6 +288,9 @@ function setMessage(result) {
 
   playerAttacksSet.appendChild(newPlayerAttack);
   enemyAttacksSet.appendChild(newEnemyAttack);
+
+  // console.log(playerAttacksSet);
+  // console.log(enemyAttacksSet);
 }
 
 function setResultMessage(finalResult) {
@@ -308,6 +313,7 @@ function fight() {
   clearInterval(interval);
   
   for (let i = 0; i < playerAttacks.length; i++) {
+
     if (playerAttacks[i] === enemyAttacks[i]) {
       setIndexPlayers(i, i);
       setMessage("TIE");
